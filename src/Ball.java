@@ -4,16 +4,18 @@ public class Ball{
     private int x, y, size, xSpeed, ySpeed;
     private Color color;
 
-    public Ball(int s, int xS, int yS){
-        x = (int)(Math.random()*500)+1;
-        y = (int)(Math.random()*500)+1;;
-        size = s;
-        xSpeed = xS;
-        ySpeed = yS;
+    public Ball(JPanel panel){
+        x = (int)(Math.random()*panel.getWidth())+1;
+        y = (int)(Math.random()*panel.getHeight())+1;;
+        size = (int)(Math.random()*50)+5;
+        xSpeed = (int)(Math.random()*100);
+        ySpeed = (int)(Math.random()*100);
+        //color = new Color(140, 3, 252);
     }
 
     public void drawBall(Graphics g){
         g.fillOval(x, y, size, size);
+        g.setColor(new Color((int)(Math.random()*255), (int)(Math.random()*255), (int)(Math.random()*255)));
     }
 
     public void moveBall(JPanel panel){
@@ -28,6 +30,7 @@ public class Ball{
             xSpeed *= -1;
         }
     }
+
 
     public void moveRight(){
         x+=3;
