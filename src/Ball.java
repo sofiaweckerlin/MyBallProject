@@ -12,7 +12,8 @@ public class Ball{
         ySpeed = (int)(Math.random()*100);
         //color = new Color(140, 3, 252);
     }
-
+//hi
+  
     public void drawBall(Graphics g){
         g.fillOval(x, y, size, size);
         g.setColor(new Color((int)(Math.random()*255), (int)(Math.random()*255), (int)(Math.random()*255)));
