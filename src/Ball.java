@@ -8,15 +8,16 @@ public class Ball{
         x = (int)(Math.random()*panel.getWidth())+1;
         y = (int)(Math.random()*panel.getHeight())+1;
         size = (int)(Math.random()*50)+6;
-        xSpeed = (int)(Math.random()*99);
-        ySpeed = (int)(Math.random()*99);
-        //color = new Color(140, 3, 252);
+        xSpeed = (int)(Math.random()*5);
+        ySpeed = (int)(Math.random()*5);
+        color = new Color((int)(Math.random()*255), (int)(Math.random()*255), (int)(Math.random()*255));
     }
 //hi
   
     public void drawBall(Graphics g){
+
+        g.setColor(color);
         g.fillOval(x, y, size, size);
-        g.setColor(new Color((int)(Math.random()*255), (int)(Math.random()*255), (int)(Math.random()*255)));
     }
 
     public void moveBall(JPanel panel){
