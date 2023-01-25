@@ -6,10 +6,10 @@ public class Ball{
 
     public Ball(JPanel panel){
         x = (int)(Math.random()*panel.getWidth())+1;
-        y = (int)(Math.random()*panel.getHeight())+1;;
-        size = (int)(Math.random()*50)+5;
-        xSpeed = (int)(Math.random()*100);
-        ySpeed = (int)(Math.random()*100);
+        y = (int)(Math.random()*panel.getHeight())+1;
+        size = (int)(Math.random()*50)+6;
+        xSpeed = (int)(Math.random()*99);
+        ySpeed = (int)(Math.random()*99);
         //color = new Color(140, 3, 252);
     }
 //hi
