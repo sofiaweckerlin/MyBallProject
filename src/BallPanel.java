@@ -7,10 +7,8 @@ import java.sql.SQLOutput;
 public class BallPanel extends JPanel{
     
     ArrayList<Ball> balls = new ArrayList<Ball>();
-    //Ball dog;
     public BallPanel(){
         setBackground(Color.RED);
-        //dog = new Ball(this);
         for(int i = 0; i<20; i++){
           Ball dog = new Ball(this);
           balls.add(dog);
@@ -27,7 +25,7 @@ public class BallPanel extends JPanel{
         //         System.out.println(e.getKeyCode());
         //         int keyCode = e.getKeyCode();
         //         if(keyCode == 68){
-        //             dog.moveRight();
+        //             balls.get(i).moveRight();
         //         }
 
         //     }
@@ -48,11 +46,6 @@ public class BallPanel extends JPanel{
           balls.get(i).drawBall(g);
           balls.get(i).moveBall(this);
         }
-
-        // dog.drawBall(g);
-        // dog.moveBall(this);
-
-
 
         try{
             Thread.sleep(10);

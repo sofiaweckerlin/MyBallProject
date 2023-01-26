@@ -12,7 +12,6 @@ public class Ball{
         ySpeed = (int)(Math.random()*5);
         color = new Color((int)(Math.random()*255), (int)(Math.random()*255), (int)(Math.random()*255));
     }
-//hi
   
     public void drawBall(Graphics g){
 
@@ -37,11 +36,6 @@ public class Ball{
     public void moveRight(){
         x+=3;
     }
-
-
-
-
-
 
 
 }
