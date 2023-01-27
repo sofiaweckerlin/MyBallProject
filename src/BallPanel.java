@@ -45,10 +45,10 @@ public class BallPanel extends JPanel{
         super.paintComponent(g);
         cat.drawBall(g);
 
-//        for(int i=0; i<20; i++){
-//          balls.get(i).drawBall(g);
-//          balls.get(i).moveBall(this);
-//        }
+        for(int i=0; i<20; i++){
+          balls.get(i).drawBall(g);
+          balls.get(i).moveBall(this);
+        }
 
         try{
             Thread.sleep(10);

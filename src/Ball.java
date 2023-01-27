@@ -20,8 +20,8 @@ public class Ball{
     }
 
     public void moveBall(JPanel panel){
-        x+=xSpeed;
-        y+=ySpeed;
+        x+=xSpeed*(-1*(Math.random()));
+        y+=ySpeed*(-1*(Math.random()));
 
         if(y >= panel.getHeight()-size || y <= 0){
             ySpeed *= -1;
