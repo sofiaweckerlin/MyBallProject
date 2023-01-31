@@ -34,27 +34,30 @@ public class Ball{
 
 
     public void moveRight(){
-        x+=5;
+        x+=3;
         if(x>=500+size){
-            x = 0-size;
+            x=0-size;
         }
     }
 
     public void moveLeft(){
-        x-=5;
+        x-=3;
+        if(x <= 0-size){
+            x=500+size;
+        }
     }
 
     public void moveUp(){
-        y-=5;
+        y-=3;
         if(y <= 0){
             y=0;
         }
     }
 
-    public void moveDown(){
-        y+=5;
+    public void moveDown(JPanel panel){
+        y+=3;
         //need panel height
-        if(y >= 500-size){
+        if(y >= panel.getHeight()-size){
             y=500-size;
         }
     }

@@ -36,7 +36,7 @@ public class BallPanel extends JPanel{
                      cat.moveUp();
                  }
                  if(keyCode == 40){
-                     cat.moveDown();
+                     cat.moveDown(e);
                  }
 
              }
