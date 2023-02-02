@@ -33,32 +33,33 @@ public class Ball{
     }
 
 
-    public void moveRight(){
+    public void moveRight(JPanel panel){
         x+=3;
-        if(x>=500+size){
-            x=0-size;
+        if(x>=panel.getWidth()-size){
+            x=0+size;
         }
     }
 
-    public void moveLeft(){
+    public void moveLeft(JPanel panel){
         x-=3;
-        if(x <= 0-size){
-            x=500+size;
+        if(x <= panel.getWidth()+size){
+            x=panel.getWidth()-size;
         }
     }
 
     public void moveUp(){
         y-=3;
         if(y <= 0){
-            y=0;
+            y+=0;
         }
     }
 
     public void moveDown(JPanel panel){
         y+=3;
         //need panel height
+        System.out.println(panel.getHeight());
         if(y >= panel.getHeight()-size){
-            y=500-size;
+            y = panel.getHeight()-size;
         }
     }
 

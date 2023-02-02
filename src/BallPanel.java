@@ -27,16 +27,16 @@ public class BallPanel extends JPanel{
                  System.out.println(e.getKeyCode());
                  int keyCode = e.getKeyCode();
                  if(keyCode == 39){
-                     cat.moveRight();
+                     cat.moveRight(BallPanel.this);
                  }
                  if(keyCode == 37){
-                     cat.moveLeft();
+                     cat.moveLeft(BallPanel.this);
                  }
                  if(keyCode == 38){
                      cat.moveUp();
                  }
                  if(keyCode == 40){
-                     cat.moveDown(new JPanel());
+                     cat.moveDown(BallPanel.this);
                  }
 
              }
