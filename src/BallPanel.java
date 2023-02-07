@@ -8,13 +8,14 @@ public class BallPanel extends JPanel{
     
     ArrayList<Ball> balls = new ArrayList<Ball>();
     Ball cat;
+    Ball pony;
     public BallPanel(){
         setBackground(Color.RED);
         cat = new Ball(this);
-        for(int i = 0; i<20; i++){
-          Ball dog = new Ball(this);
-          balls.add(dog);
-        }
+//        for(int i = 0; i<20; i++){
+//          Ball dog = new Ball(this);
+//          balls.add(dog);
+//        }
          setFocusable(true);
          addKeyListener(new KeyListener() {
              @Override
@@ -47,17 +48,33 @@ public class BallPanel extends JPanel{
              }
          });
 
+         JButton button = new JButton("add ball");
+         this.add(button);
+         button.addActionListener(new ActionListener() {
+             @Override
+             public void actionPerformed(ActionEvent e) {
+                 balls.add(new Ball(BallPanel.this));
+             }
+         });
+
+
+
+
     }
+
+
 
     @Override
     protected void paintComponent(Graphics g){
         super.paintComponent(g);
         cat.drawBall(g);
+//        pony.drawBall(g);
+//        pony.moveBall(this);
 
-//        for(int i=0; i<20; i++){
-//          balls.get(i).drawBall(g);
-//          balls.get(i).moveBall(this);
-//        }
+        for(int i=0; i<balls.size(); i++){
+          balls.get(i).drawBall(g);
+          balls.get(i).moveBall(this);
+        }
 
         try{
             Thread.sleep(10);
@@ -65,6 +82,8 @@ public class BallPanel extends JPanel{
         catch(Exception e){
             System.out.println(e);
         }
+
+
 
         repaint(); //method that recalls the paint method to animate
     }

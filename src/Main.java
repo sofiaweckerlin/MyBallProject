@@ -8,9 +8,12 @@ public class Main{
         myFrame.setSize(500, 500);
         Main myPanel = new Main();
         BallPanel ballPanel = new BallPanel();
+        //JButton button = new JButton();
 
         //this panel is not added to the frame yet
         //myFrame.add(myPanel);
+
+        //myFrame.add(button);
 
         myFrame.add(ballPanel);
 
