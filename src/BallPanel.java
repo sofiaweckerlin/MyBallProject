@@ -2,7 +2,6 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 import java.util.*;
-import java.sql.SQLOutput;
 
 public class BallPanel extends JPanel{
     
@@ -57,6 +56,23 @@ public class BallPanel extends JPanel{
              }
          });
 
+         this.addMouseListener(new MouseAdapter() {
+             @Override
+             public void mouseClicked(MouseEvent e) {
+                 int x = e.getX();
+                 int y = e.getY();
+                 System.out.println(x + ", " + y);
+
+                 for(int i = 0; i<balls.size(); i++){
+                     System.out.println(balls.get(i).findX());
+//                     if (x == balls.get(i).getX() && y == balls.get(i).getY()) {
+//                         balls.remove(i);
+//                     }
+                 }
+             }
+         });
+
+
 
 
 
@@ -67,7 +83,7 @@ public class BallPanel extends JPanel{
     @Override
     protected void paintComponent(Graphics g){
         super.paintComponent(g);
-        cat.drawBall(g);
+        //cat.drawBall(g);
 //        pony.drawBall(g);
 //        pony.moveBall(this);
 

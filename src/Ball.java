@@ -61,5 +61,13 @@ public class Ball{
         }
     }
 
+    public int findX(){
+        return x;
+    }
+
+    public int findY(){
+        return y;
+    }
+
 
 }
