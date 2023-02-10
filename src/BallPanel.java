@@ -61,13 +61,14 @@ public class BallPanel extends JPanel{
              public void mouseClicked(MouseEvent e) {
                  int x = e.getX();
                  int y = e.getY();
+                 int ballSize;
                  System.out.println(x + ", " + y);
 
+
                  for(int i = 0; i<balls.size(); i++){
-                     System.out.println(balls.get(i).findX());
-//                     if (x == balls.get(i).getX() && y == balls.get(i).getY()) {
-//                         balls.remove(i);
-//                     }
+                     System.out.println("ball: " + balls.get(i).findX()+", "+ balls.get(i).findY());
+                     ballSize = balls.get(i).getSize();
+
                  }
              }
          });
