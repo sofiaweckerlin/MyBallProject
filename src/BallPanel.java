@@ -59,15 +59,18 @@ public class BallPanel extends JPanel{
          this.addMouseListener(new MouseAdapter() {
              @Override
              public void mouseClicked(MouseEvent e) {
-                 int x = e.getX();
+                 int x = e.getX(); //use find method here in ball class
                  int y = e.getY();
                  int ballSize;
-                 System.out.println(x + ", " + y);
+                 //System.out.println(x + ", " + y);
 
 
                  for(int i = 0; i<balls.size(); i++){
-                     System.out.println("ball: " + balls.get(i).findX()+", "+ balls.get(i).findY());
+                     //System.out.println("ball: " + balls.get(i).findX()+", "+ balls.get(i).findY());
                      ballSize = balls.get(i).getSize();
+                     if((x >= e.getX() && x <= ballSize) && (y >= y//fix && y <= ballSize)){
+                         balls.remove(i);
+                     }
 
                  }
              }

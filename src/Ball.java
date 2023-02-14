@@ -70,6 +70,7 @@ public class Ball{
     }
 
     public int getSize(){
+
         return size;
     }
 
