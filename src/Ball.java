@@ -7,9 +7,9 @@ public class Ball{
     public Ball(JPanel panel){
         x = (int)(Math.random()*panel.getWidth())+1;
         y = (int)(Math.random()*panel.getHeight())+1;
-        size = (int)(Math.random()*50)+6;
-        xSpeed = (int)(Math.random()*5);
-        ySpeed = (int)(Math.random()*5);
+        size = (int)(Math.random()*50)+20;
+        xSpeed = (int)(Math.random()*3);
+        ySpeed = (int)(Math.random()*3);
         color = new Color((int)(Math.random()*255), (int)(Math.random()*255), (int)(Math.random()*255));
     }
   
